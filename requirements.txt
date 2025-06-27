@@ -1,0 +1,9 @@
+
+#pip install --upgrade pip 
+#pip install -r requirements.txt
+robotframework==7.3                  # core test runner :contentReference[oaicite:0]{index=0}
+robotframework-browser==19.3.1       # Playwright wrapper :contentReference[oaicite:1]{index=1}
+#robotframework-gherkin-parser        # run *.feature files directly :contentReference[oaicite:2]{index=2}
+#allure-robotframework                # Allure listener :contentReference[oaicite:3]{index=3}
+# optional extras
+#robotframework-pabot                 # parallel runs :contentReference[oaicite:4]{index=4}

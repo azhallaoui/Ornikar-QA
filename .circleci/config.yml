@@ -1,0 +1,48 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/python:3.9-browsers
+    
+    working_directory: ~/project
+    
+    steps:
+      - checkout
+      
+      - run:
+          name: Install system dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y xvfb
+      
+      - run:
+          name: Install Python dependencies
+          command: |
+            python -m pip install --upgrade pip
+            pip install robotframework
+            pip install robotframework-browser
+            pip install robotframework-pabot
+      
+      - run:
+          name: Initialize Browser library
+          command: |
+            rfbrowser init
+      
+      - run:
+          name: Run Robot Framework tests with Pabot
+          command: |
+            xvfb-run -a pabot --processes 4 --outputdir reports robot-rf/tests/
+      
+      - store_test_results:
+          path: results
+      
+      - store_artifacts:
+          path: results
+          destination: test-results
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
