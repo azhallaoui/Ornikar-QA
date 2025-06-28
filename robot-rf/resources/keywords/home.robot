@@ -14,6 +14,7 @@ Accept all tracking
     Click  id=axeptio_btn_acceptAll
 
 The user is on the Insurance page
+    Set Browser Timeout    30s
     Open Home Page
     Accept all tracking
     Click    ${X MENU ASSURANCE}
