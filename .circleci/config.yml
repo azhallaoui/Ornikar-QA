@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Run Robot Framework tests with Pabot
           command: |
-            xvfb-run -a pabot --processes 4 --outputdir reports robot-rf/tests/
+            xvfb-run -a pabot --processes 4 --outputdir results robot-rf/tests/
       
       - store_test_results:
           path: results
