@@ -1,9 +1,10 @@
 *** Variables ***
 ${BTN DEVIS}                   //*[@action_type="Go To Signup"]
 ${BUTTON NEXT STEP}           //*[@data-testid="quoteFlow.button.nextStep"]
-${DATE_PICKER}         //*[@data-testid="kitt.KeyboardDatePicker.day"]
+${DATE_PICKER}               //*[@data-testid="kitt.KeyboardDatePicker.day"]
 
 #VEHICLE RELEATED
+${SEARCH_CAR_BY_PLATE}        //*[@data-testid="button.VehicleSearchChoiceScreen.searchCarByPlate"]
 ${INPUT LICENCE PLATE}        //*[@data-testid="field.VehicleLicensePlateScreen.vehicleImmatriculation"]
 ${SELECT VEHICLE VERSION}     //*[@data-testid="autocomplete.VersionAutocomplete.vehicleVersion"]
 #Votre véhicule est-il actuellement assuré ?

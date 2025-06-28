@@ -1,5 +1,4 @@
 *** Settings ***
-Library    Dialogs
 Library    Browser
 Resource   ../resources/pages/login.robot
 Resource   ../resources/keywords/login.robot
