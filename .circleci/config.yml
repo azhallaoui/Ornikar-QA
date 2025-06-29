@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Initialize Browser library
           command: |
-            rfbrowser init --auto
+            rfbrowser init
       
       - run:
           name: Run Robot Framework tests with Pabot
