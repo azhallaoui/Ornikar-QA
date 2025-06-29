@@ -5,7 +5,7 @@ Resource    ../pages/home.robot
 
 
 Open Home Page
-    New Browser     ${BROWSER}    headless=False
+    New Browser     ${BROWSER}    headless=True
     New Context
     New Page        ${BASE_URL}
 
